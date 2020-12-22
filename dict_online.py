@@ -45,7 +45,7 @@ class Handle:
                 sleep(0.1)
                 sock.send(str(his).encode())
         else:
-            print("目前无查询记录")
+            sock.send("目前无查询记录".encode())
         sleep(0.1)
         sock.send(b"done")
 
