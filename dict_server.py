@@ -43,8 +43,8 @@ class Server:
             except KeyboardInterrupt:
                 self.__tcpsock.close()
                 return
-            p = SerProcess(client)
-            p.start()
+            # p = SerProcess(client)
+            # p.start()
 
 
 # class Server:
