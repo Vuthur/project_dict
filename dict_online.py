@@ -89,10 +89,10 @@ class Server:
             rs, ws, xs = select(self.__rlist, self.__wlist, self.__xlist)
             for sock in rs:
                 if sock is self.__tcpsock:
-                   client, addr = sock.accept()
-                   print(addr, "has connected.")
-                   client.setblocking(False)
-                   self.__rlist.append(client)
+                    client, addr = sock.accept()
+                    print(addr, "has connected.")
+                    client.setblocking(False)
+                    self.__rlist.append(client)
                 else:
                     data = sock.recv(1024)
                     if not data:
