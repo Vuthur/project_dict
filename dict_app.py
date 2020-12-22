@@ -33,7 +33,7 @@ class ClientHandle:
             name = input("请输入用户名:")
             if not name:
                 break
-            password = input("请输入你的密码")
+            password = input("请输入你的密码:")
             self.__client.send(f"LOGIN {name} {password}".encode())
             data = self.__client.recv(1024)
             if data == b"n_wrong":
@@ -113,7 +113,7 @@ class ClientView:
     def __sub_main(self, name):
         while True:
             self.__view2()
-            choice = input("请输入你的选项")
+            choice = input("请输入你的选项:")
             self.__choice2(choice, name)
             if choice == "3":
                 break
