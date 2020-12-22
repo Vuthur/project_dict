@@ -70,7 +70,7 @@ class ClientHandle:
             print(his)
 
     def logout(self):
-        msg = f"LOGOUT "
+        msg = "LOGOUT "
         self.__client.send(msg.encode())
 
 
