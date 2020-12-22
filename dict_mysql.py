@@ -54,7 +54,7 @@ class SerDatabase:
         self.db.commit()
 
     def select_his(self, name):
-        sql = "select name, word, time from history where name = '%s';" % name
+        sql = "select name, word, time from history where name = '%s' order by id desc;" % name
         self.cur.execute(sql)
         his = self.cur.fetchmany(10)
         if his: return his
