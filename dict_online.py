@@ -105,6 +105,7 @@ class Server:
             p = SerProcess(client)
             p.start()
 
+
 if __name__ == '__main__':
     ser = Server()
     ser.main()
