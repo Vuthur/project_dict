@@ -49,9 +49,6 @@ class Handle:
         sleep(0.1)
         sock.send(b"done")
 
-    def logout(self, sock):
-        sock.close()
-
     def request(self, sock, data):
         data_list = data.decode().split(" ", 3)
         if data_list[0] == "ENROLL":
