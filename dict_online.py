@@ -1,4 +1,4 @@
-from dict_mysql import UserStorage
+from dict_mysql import SerDatabase
 from socket import *
 from select import select
 from time import sleep
@@ -6,7 +6,7 @@ from time import sleep
 
 class Handle:
     def __init__(self):
-        self.__userdata = UserStorage()
+        self.__userdata = SerDatabase()
 
     def enroll(self, sock, data_list):
         if data_list[1] == "U":

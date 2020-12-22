@@ -2,7 +2,7 @@ from pymysql import *
 
 
 # 注意 connect 传参一定需要关键字传参
-class UserStorage:
+class SerDatabase:
     def __init__(self):
         self.host = "localhost"
         self.port = 3306
@@ -62,7 +62,7 @@ class UserStorage:
 
 
 if __name__ == '__main__':
-    user = UserStorage()
+    user = SerDatabase()
     a = user.select_his("wu")
     if a:
         for b in a:
