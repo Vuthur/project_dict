@@ -13,6 +13,8 @@ class ClientHandle:
     def enroll(self):
         while True:
             name = input("请输入注册用户名:")
+            if not name:
+                break
             self.__client.send(f"ENROLL U {name}".encode())
             data = self.__client.recv(1024)
             if data == b"ok":
@@ -29,6 +31,8 @@ class ClientHandle:
     def login(self):
         while True:
             name = input("请输入用户名:")
+            if not name:
+                break
             password = input("请输入你的密码")
             self.__client.send(f"LOGIN {name} {password}".encode())
             data = self.__client.recv(1024)
